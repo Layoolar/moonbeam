@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Navbar with Background Image</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bg-image {
+      background-image: url('back.jpg'); /* Replace with your image URL */
+      background-size: contain;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .navbar {
+      background: rgba(0, 0, 0, 0.5); /* Transparent background for the navbar */
+      width: 100%; /* Ensure the navbar spans the full width of the page */
+      position: fixed; /* Fix the navbar to the top */
+      top: 0;
+      left: 0;
+      z-index: 1000; /* Ensure the navbar is above other content */
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .custom-button {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #19a5b5, #19a5b5);
+      color: white;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .custom-button:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #19a5b5, #19a5b5);
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-image">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+       
+          <li class="nav-item">
+            <a class="nav-link" href="#">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Telegram</a>
+          </li>
+     
+        </ul>
+      </div>
+    </nav>
+    <div class="button-container">
+        <button class="custom-button">TWITTER</button>
+        <button class="custom-button">TELEGRAM</button>
+      </div>
+  </div>
+  
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
